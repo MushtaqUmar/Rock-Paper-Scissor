@@ -58,21 +58,22 @@ const disableBoxes = () => {  //Or:  function disableBoxes(){ ... }
 // helper -> function to check winner
 function checkWinner() {
   for (let pattern of winPatterns) {
+    // winPatterns: is array above
     // pattern : current winning pattern (array itslef) under consideration
-    let pos1Val = boxes[pattern[0]].innerHTML; // pattern is array itself AND pattern[0] : gives value at index 0 in array 'pattern'.
+    let pos1Val = boxes[pattern[0]].innerHTML; // pattern is array itself AND pattern[0] : gives element at index 0 in array pattern
     let pos2Val = boxes[pattern[1]].innerHTML; // AND: boxes: list of boxes AND pattern[i] return index AND boxes[pattern[i]] gives box at that index
     let pos3Val = boxes[pattern[2]].innerHTML; // innerHTML : returns X or O at that box
     // index 0,1,2 to current pattern array is checked for content (if same declare winner)
 
-    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {      // box must not be empty to check winning condition
+    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+      // box must not be empty to check winning condition
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        // we got winner (dont't allow now to print X or O anymore for any click )
+        // we got winner (dont't allow now to enter X or O anymore )
         disableBoxes(); // call
         // declare winner
         showWinner(pos1Val); // call
       }
     }
-    
   }
 }
 
