@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#003049 ;
+    text-align: center;
+    
+}
+
+.container{
+    height: 70vh;   /* 70% of view-port height is taken by container (chahe kitne bhi content ho) */
+    /* To put game in center  of container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.game{
+    height: 60vmin;  /* vmin: 1% of viewport's smaller dimension (almost same sa we set for containet */
+    width: 60vmin;
+
+    /* for wrap: put boxes in 3 lines and in center of game box  */
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    /* gap b/w boxex  */
+    gap: 1vmin;
+
+}
+
+.box{
+    height:18vmin ;  /* we have 60vmin height to game box, and we need 3 boxes in each line so around 20% each */
+    width:18vmin ;
+
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow:0 0 1rem rgba(0, 0, 0, 0.5) ;   /* blackish */
+           /* length length length color  */
+
+    /* font: Size of entered X or O   and color*/
+    font-size: 8vmin;    /* fits well bcz we have box of dimension 18vmin/18vmin */
+    color: #780000;
+
+    background-color: aliceblue;  
+}
+
+#reset-btn{
+    padding: 1rem;  /* wrt to root element i.e., html element */
+    font-size: 1.25rem ;
+    background-color: #191913;
+    color: #ffffff;
+    border-radius: 1rem;
+    border: none;
+}
+
+#new-btn{
+    padding: 1rem;  /* wrt to root element i.e., html element */
+    font-size: 1.25rem ;
+    background-color: #191913;
+    color: #ffffff;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg{
+    color: #ffffc7;  /* text color */
+    font-size: 6vmin;
+}
+
+/* hide: class bcz we need initially to hide and show only when needed like when winner is declared */
+.hide{           /* hide class removed in js code showWInner() method*/
+     display: none;  
+}

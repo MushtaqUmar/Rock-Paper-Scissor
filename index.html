@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic_Tac_Toe Game</title>
+
+    <!-- Link css file -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="msg-container hide">
+        <!-- hide: class bcz we need initially to hide and show only when needed like when winner is declared-->
+        <!-- ^ 'hide' class is removed in js code showWInner() method*/ -->
+        <p id="msg">Winner</p> <!-- its content is changed in showWInner() in js file-->
+        <button id="new-btn">New Game</button>
+    </div>
+
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <div class="container"> <!-- To store whole game-->
+            <div class="game">
+                <!-- Need 9 boxex which are clickable  -->
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+
+        <!-- Resetting game  -->
+        <button id="reset-btn">Reset Game</button>
+    </main>
+
+
+
+    <!-- Link js file  -->
+    <script src="./script1.js"></script>
+</body>
+
+</html>
